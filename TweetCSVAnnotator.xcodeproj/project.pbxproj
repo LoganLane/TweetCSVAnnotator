@@ -3,19 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0254FC7325F0925500AF51DB /* CodableCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 0254FC7225F0925500AF51DB /* CodableCSV */; };
+		02904B5525F078FE00671FF0 /* tweetStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02904B5425F078FE00671FF0 /* tweetStructure.swift */; };
 		02ABCF8725EB687700037B27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABCF8625EB687700037B27 /* AppDelegate.swift */; };
 		02ABCF8925EB687700037B27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABCF8825EB687700037B27 /* SceneDelegate.swift */; };
-		02ABCF8B25EB687700037B27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABCF8A25EB687700037B27 /* ViewController.swift */; };
+		02ABCF8B25EB687700037B27 /* TweetDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABCF8A25EB687700037B27 /* TweetDetailedViewController.swift */; };
 		02ABCF8E25EB687700037B27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02ABCF8C25EB687700037B27 /* Main.storyboard */; };
 		02ABCF9125EB687700037B27 /* TweetCSVAnnotator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 02ABCF8F25EB687700037B27 /* TweetCSVAnnotator.xcdatamodeld */; };
 		02ABCF9325EB687800037B27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02ABCF9225EB687800037B27 /* Assets.xcassets */; };
 		02ABCF9625EB687800037B27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02ABCF9425EB687800037B27 /* LaunchScreen.storyboard */; };
 		02ABCFA125EB687800037B27 /* TweetCSVAnnotatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABCFA025EB687800037B27 /* TweetCSVAnnotatorTests.swift */; };
 		02ABCFAC25EB687800037B27 /* TweetCSVAnnotatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABCFAB25EB687800037B27 /* TweetCSVAnnotatorUITests.swift */; };
+		02ABCFC325EB741900037B27 /* CSVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABCFC225EB741900037B27 /* CSVParser.swift */; };
+		02E8B7AB25ECC0140007325F /* TweetListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8B7AA25ECC0140007325F /* TweetListTableViewController.swift */; };
+		02F2D19B26085E38002D2F1F /* CSVExport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F2D19A26085E38002D2F1F /* CSVExport.swift */; };
+		02F2D1A82609B606002D2F1F /* Saved_tweets2_type_added.csv in Resources */ = {isa = PBXBuildFile; fileRef = 02F2D1A72609B606002D2F1F /* Saved_tweets2_type_added.csv */; };
+		02F2D1C8260F0337002D2F1F /* CSV.png in Resources */ = {isa = PBXBuildFile; fileRef = 02F2D1C7260F0337002D2F1F /* CSV.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0254FC6A25F0848100AF51DB /* SwiftCSV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftCSV.framework; path = Carthage/Build/iOS/SwiftCSV.framework; sourceTree = "<group>"; };
+		02904B5425F078FE00671FF0 /* tweetStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tweetStructure.swift; sourceTree = "<group>"; };
 		02ABCF8325EB687700037B27 /* TweetCSVAnnotator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetCSVAnnotator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02ABCF8625EB687700037B27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02ABCF8825EB687700037B27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		02ABCF8A25EB687700037B27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		02ABCF8A25EB687700037B27 /* TweetDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDetailedViewController.swift; sourceTree = "<group>"; };
 		02ABCF8D25EB687700037B27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		02ABCF9025EB687700037B27 /* TweetCSVAnnotator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TweetCSVAnnotator.xcdatamodel; sourceTree = "<group>"; };
 		02ABCF9225EB687800037B27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +60,11 @@
 		02ABCFA725EB687800037B27 /* TweetCSVAnnotatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TweetCSVAnnotatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02ABCFAB25EB687800037B27 /* TweetCSVAnnotatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCSVAnnotatorUITests.swift; sourceTree = "<group>"; };
 		02ABCFAD25EB687800037B27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02ABCFC225EB741900037B27 /* CSVParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVParser.swift; sourceTree = "<group>"; };
+		02E8B7AA25ECC0140007325F /* TweetListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetListTableViewController.swift; sourceTree = "<group>"; };
+		02F2D19A26085E38002D2F1F /* CSVExport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVExport.swift; sourceTree = "<group>"; };
+		02F2D1A72609B606002D2F1F /* Saved_tweets2_type_added.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Saved_tweets2_type_added.csv; sourceTree = "<group>"; };
+		02F2D1C7260F0337002D2F1F /* CSV.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CSV.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0254FC7325F0925500AF51DB /* CodableCSV in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,13 +93,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0254FC6925F0848100AF51DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0254FC6A25F0848100AF51DB /* SwiftCSV.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		02ABCF7A25EB687700037B27 = {
 			isa = PBXGroup;
 			children = (
+				02904B5425F078FE00671FF0 /* tweetStructure.swift */,
 				02ABCF8525EB687700037B27 /* TweetCSVAnnotator */,
 				02ABCF9F25EB687800037B27 /* TweetCSVAnnotatorTests */,
 				02ABCFAA25EB687800037B27 /* TweetCSVAnnotatorUITests */,
 				02ABCF8425EB687700037B27 /* Products */,
+				0254FC6925F0848100AF51DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,12 +128,17 @@
 			children = (
 				02ABCF8625EB687700037B27 /* AppDelegate.swift */,
 				02ABCF8825EB687700037B27 /* SceneDelegate.swift */,
-				02ABCF8A25EB687700037B27 /* ViewController.swift */,
 				02ABCF8C25EB687700037B27 /* Main.storyboard */,
+				02ABCF8A25EB687700037B27 /* TweetDetailedViewController.swift */,
+				02E8B7AA25ECC0140007325F /* TweetListTableViewController.swift */,
+				02F2D19A26085E38002D2F1F /* CSVExport.swift */,
+				02ABCFC225EB741900037B27 /* CSVParser.swift */,
 				02ABCF9225EB687800037B27 /* Assets.xcassets */,
 				02ABCF9425EB687800037B27 /* LaunchScreen.storyboard */,
+				02F2D1C7260F0337002D2F1F /* CSV.png */,
 				02ABCF9725EB687800037B27 /* Info.plist */,
 				02ABCF8F25EB687700037B27 /* TweetCSVAnnotator.xcdatamodeld */,
+				02F2D1A72609B606002D2F1F /* Saved_tweets2_type_added.csv */,
 			);
 			path = TweetCSVAnnotator;
 			sourceTree = "<group>";
@@ -141,12 +171,16 @@
 				02ABCF7F25EB687700037B27 /* Sources */,
 				02ABCF8025EB687700037B27 /* Frameworks */,
 				02ABCF8125EB687700037B27 /* Resources */,
+				0254FC7025F0849C00AF51DB /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = TweetCSVAnnotator;
+			packageProductDependencies = (
+				0254FC7225F0925500AF51DB /* CodableCSV */,
+			);
 			productName = TweetCSVAnnotator;
 			productReference = 02ABCF8325EB687700037B27 /* TweetCSVAnnotator.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +252,9 @@
 				Base,
 			);
 			mainGroup = 02ABCF7A25EB687700037B27;
+			packageReferences = (
+				0254FC7125F0925500AF51DB /* XCRemoteSwiftPackageReference "CodableCSV" */,
+			);
 			productRefGroup = 02ABCF8425EB687700037B27 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,6 +271,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02F2D1A82609B606002D2F1F /* Saved_tweets2_type_added.csv in Resources */,
+				02F2D1C8260F0337002D2F1F /* CSV.png in Resources */,
 				02ABCF9625EB687800037B27 /* LaunchScreen.storyboard in Resources */,
 				02ABCF9325EB687800037B27 /* Assets.xcassets in Resources */,
 				02ABCF8E25EB687700037B27 /* Main.storyboard in Resources */,
@@ -256,12 +295,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0254FC7025F0849C00AF51DB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftCSV.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		02ABCF7F25EB687700037B27 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02ABCF8B25EB687700037B27 /* ViewController.swift in Sources */,
+				02ABCFC325EB741900037B27 /* CSVParser.swift in Sources */,
+				02E8B7AB25ECC0140007325F /* TweetListTableViewController.swift in Sources */,
+				02ABCF8B25EB687700037B27 /* TweetDetailedViewController.swift in Sources */,
+				02904B5525F078FE00671FF0 /* tweetStructure.swift in Sources */,
+				02F2D19B26085E38002D2F1F /* CSVExport.swift in Sources */,
 				02ABCF9125EB687700037B27 /* TweetCSVAnnotator.xcdatamodeld in Sources */,
 				02ABCF8725EB687700037B27 /* AppDelegate.swift in Sources */,
 				02ABCF8925EB687700037B27 /* SceneDelegate.swift in Sources */,
@@ -442,6 +506,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WRQMM7WZL6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TweetCSVAnnotator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,7 +518,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Logan.TweetCSVAnnotator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -461,6 +529,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WRQMM7WZL6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TweetCSVAnnotator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -469,7 +541,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Logan.TweetCSVAnnotator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -597,6 +669,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0254FC7125F0925500AF51DB /* XCRemoteSwiftPackageReference "CodableCSV" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dehesa/CodableCSV.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0254FC7225F0925500AF51DB /* CodableCSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0254FC7125F0925500AF51DB /* XCRemoteSwiftPackageReference "CodableCSV" */;
+			productName = CodableCSV;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		02ABCF8F25EB687700037B27 /* TweetCSVAnnotator.xcdatamodeld */ = {
