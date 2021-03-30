@@ -9,7 +9,7 @@ import Foundation
 import CodableCSV
 
 
-
+//This function parses the provided CSV file and breaks each piece down into codable values into the tweetStructure.swift struct 'Tweet'
 func parseCSV(){
     queue.async {
         timingSemaphore.wait()

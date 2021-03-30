@@ -21,7 +21,6 @@
 		02ABCFC325EB741900037B27 /* CSVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ABCFC225EB741900037B27 /* CSVParser.swift */; };
 		02E8B7AB25ECC0140007325F /* TweetListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8B7AA25ECC0140007325F /* TweetListTableViewController.swift */; };
 		02F2D19B26085E38002D2F1F /* CSVExport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F2D19A26085E38002D2F1F /* CSVExport.swift */; };
-		02F2D1A82609B606002D2F1F /* Saved_tweets2_type_added.csv in Resources */ = {isa = PBXBuildFile; fileRef = 02F2D1A72609B606002D2F1F /* Saved_tweets2_type_added.csv */; };
 		02F2D1C8260F0337002D2F1F /* CSV.png in Resources */ = {isa = PBXBuildFile; fileRef = 02F2D1C7260F0337002D2F1F /* CSV.png */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +62,6 @@
 		02ABCFC225EB741900037B27 /* CSVParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVParser.swift; sourceTree = "<group>"; };
 		02E8B7AA25ECC0140007325F /* TweetListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetListTableViewController.swift; sourceTree = "<group>"; };
 		02F2D19A26085E38002D2F1F /* CSVExport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVExport.swift; sourceTree = "<group>"; };
-		02F2D1A72609B606002D2F1F /* Saved_tweets2_type_added.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Saved_tweets2_type_added.csv; sourceTree = "<group>"; };
 		02F2D1C7260F0337002D2F1F /* CSV.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CSV.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,7 +136,6 @@
 				02F2D1C7260F0337002D2F1F /* CSV.png */,
 				02ABCF9725EB687800037B27 /* Info.plist */,
 				02ABCF8F25EB687700037B27 /* TweetCSVAnnotator.xcdatamodeld */,
-				02F2D1A72609B606002D2F1F /* Saved_tweets2_type_added.csv */,
 			);
 			path = TweetCSVAnnotator;
 			sourceTree = "<group>";
@@ -271,7 +268,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02F2D1A82609B606002D2F1F /* Saved_tweets2_type_added.csv in Resources */,
 				02F2D1C8260F0337002D2F1F /* CSV.png in Resources */,
 				02ABCF9625EB687800037B27 /* LaunchScreen.storyboard in Resources */,
 				02ABCF9325EB687800037B27 /* Assets.xcassets in Resources */,

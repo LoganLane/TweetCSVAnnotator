@@ -18,6 +18,9 @@ var path : String?
 var decode2: String?
 var TweetList = [Tweet]()
 class TweetListTableViewController: UITableViewController, UIDocumentPickerDelegate{
+    //A semaphore needed to be used here because UI changes cannot be relegated to another thread and the timing was off without it. (The parsing function fired off before the selected file was passed causing a crash. The semaphore solved this.)
+    
+    //This function brings up the document selector and allows the user to select a CSV file to be parsed
     func selectCSV() {
         queue.sync {
             let type = UTType.types(tag: "csv", tagClass: UTTagClass.filenameExtension, conformingTo: nil)
@@ -27,7 +30,7 @@ class TweetListTableViewController: UITableViewController, UIDocumentPickerDeleg
             
         }
     }
-    
+    //Passes the selected file's URL
     func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
         queue.sync {
             let userSelectedCSV = urls[0]
@@ -35,23 +38,23 @@ class TweetListTableViewController: UITableViewController, UIDocumentPickerDeleg
             path = userFile?.path
             CSVData = try? Data(contentsOf: userFile!)
             decode2 = String(decoding: CSVData!, as: UTF8.self)
-            print("This is decode2", decode2)
             timingSemaphore.signal()
         }
     }
     
+    //This is an Objective C function that is used in combination with the notification center call to update the table from another class separate from the view controller itself
     @objc func refresh(){
         TweetTable.reloadData()
     }
     
-    
-    
     @IBOutlet var TweetTable: UITableView!
+    
     
     @IBAction func FileImportButton(_ sender: Any) {
         selectCSV()
         parseCSV()
         TweetTable.reloadData()
+        //observes a call from the CSVParser.swift file and refreshes the TweetTable TableUIView when it recieves the signal from that file
         DispatchQueue.main.async {
             NotificationCenter
                 .default
@@ -60,6 +63,7 @@ class TweetListTableViewController: UITableViewController, UIDocumentPickerDeleg
         
     }
     
+    //exports the updated CSV file into the documents folder on the user's iPad.
     @IBAction func FileExportButton(_ sender: Any) {
         exportCSV()
     }
@@ -70,15 +74,14 @@ class TweetListTableViewController: UITableViewController, UIDocumentPickerDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //parseCSV()
-        //print("This is csvtestfile", csvtestfile)
-        //self.tableView.reloadData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    //Deinitializes the observer above
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
@@ -105,7 +108,7 @@ class TweetListTableViewController: UITableViewController, UIDocumentPickerDeleg
         let row = indexPath.row
         cell.textLabel!.text = TweetList[row].tweet
         
-        
+        //Logic for highlighting Tweet cells deemed hate speech in red
         if(TweetList[row].Type == true){
             cell.contentView.backgroundColor = UIColor.red
             cell.textLabel!.textColor = UIColor.black
@@ -124,6 +127,7 @@ class TweetListTableViewController: UITableViewController, UIDocumentPickerDeleg
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             // Get the new view controller using segue.destination.
             // Pass the selected object to the new view controller.
+            // Passses the data for each individual Tweet to the TweetDetailedViewController
             if let indexPath = tableView.indexPathForSelectedRow{
                 guard let destinationVC = segue.destination as? TweetDetailedViewController else{return}
                 let selectedRow = indexPath.row

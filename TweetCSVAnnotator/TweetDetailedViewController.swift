@@ -19,6 +19,7 @@ class TweetDetailedViewController: UIViewController{
         print(arraynum)
     }
 
+    //Debugging function used to output the "Type" variable of each TweetList Entry
     func test(){
         for n in 0...99 {
             print(TweetList[n].Type)
@@ -26,6 +27,7 @@ class TweetDetailedViewController: UIViewController{
     }
     @IBOutlet weak var TweetView: UITextView!
     
+    //User presses normal button and it updates the TweetList Array and moves on to next entry
     @IBAction func ItsNormal(_ sender: Any) {
         TweetSegueType = false
         
@@ -34,20 +36,15 @@ class TweetDetailedViewController: UIViewController{
             self.navigationController?.popViewController(animated: true)
         }
         else{
-            
             TweetView.text = TweetList[arraynum].tweet
             TweetList[arraynum].Type = false
             arraynum = arraynum + 1
             updateTweetView()
             test()
-            
-            //TweetView.text = TweetList[arraynum].tweet
-            
-            
         }
     }
     
-    
+    //User presses hate speech button and it updates the TweetList Array and moves on to next entry
     @IBAction func ItsHateful(_ sender: Any) {
         TweetSegueType = true
         
